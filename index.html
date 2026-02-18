@@ -915,7 +915,7 @@
     /* Founder & Vision: center content on mobile */
     @media (max-width: 768px) {
       /* Stack the two columns and center their contents */
-      founder img{
+      #founder img{
         width:95%;
       }
       #founder > div {
@@ -945,7 +945,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 5px;
+       
       }
       
       /* Ensure the check rows center their items */
@@ -976,8 +976,13 @@
   flex: 1;
   min-width: 300px;
   position: relative;
-  height: 500px;
+  height: auto;
 }
+    .about-images img {
+      width:100%;
+      height:auto;
+      display:block;
+    }
 
 /* Right Content */
 .about-content {
@@ -997,7 +1002,7 @@
   }
 
   .about-images {
-    height: 380px;
+    height: auto;
   }
 
   .about-content {
@@ -1017,7 +1022,7 @@
   }
 
   .about-images {
-    height: 320px;
+    height: auto;
   }
 
   .theme-hero-text {
@@ -1944,6 +1949,7 @@
   </style>
 </body>
 </html>
+
 
 
 
