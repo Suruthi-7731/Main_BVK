@@ -771,6 +771,86 @@
       background: #f8f9fa;
     }
 
+.reel-testimonials {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.reel-testimonials h2 {
+    font-size: 40px;
+    color:rgb(199, 13, 175);
+    margin-bottom: 30px;
+}
+
+.reels-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.reel-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.reel-card video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.reel-caption {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ff8800;
+}
+
+
+@media (max-width: 768px) {
+
+    .reel-testimonials {
+        padding: 20px 10px;
+        text-align: left;
+    }
+
+    .reel-testimonials h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding-left: 5px;
+    }
+
+    .reels-wrapper {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .reels-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .reel-card {
+        min-width: 160px;
+        height: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+    .reel-card video {
+        height: 100%;
+    }
+
+    .reel-caption {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+    
     /* Removed grid for marquee */
     /* .testi-grid { ... } */
 
@@ -1998,6 +2078,7 @@
 
 
 </html>
+
 
 
 
