@@ -61,29 +61,40 @@
     transition: transform 10s ease-in-out;
 }
 
-/* Optional: smooth zoom animation */
-@keyframes zoomEffect {
-    0% { transform: scale(1.2); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1.2); }
-}
 
-.video-bg {
-    animation: zoomEffect 20s infinite alternate;
-}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .video-bg {
-        transform: scale(1.1); /* less zoom for mobile */
-        animation: zoomEffect 20s infinite alternate; /* keep smooth animation */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    /* Zoom effect */
+    transform: scale(1.3);
+    transform-origin: center center;
+    transition: transform 10s ease-in-out;
     }
 }
 
 @media (max-width: 480px) {
     .video-bg {
-        transform: scale(1); /* avoid cutting too much on very small screens */
-        animation: none; /* optional: stop animation on very small screens for performance */
+        position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    /* Zoom effect */
+    transform: scale(1.3);
+    transform-origin: center center;
+    transition: transform 10s ease-in-out;
     }
 }
 
@@ -1923,5 +1934,6 @@
   </style>
 </body>
 </html>
+
 
 
