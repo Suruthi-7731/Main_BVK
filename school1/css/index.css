@@ -182,7 +182,6 @@ p {
    justify-content: space-between;
    align-items: center;
    padding-inline: max(5%, 50px);
-   padding-top: 3px;
    position: fixed;
    top: 0;
    z-index: 1000;
