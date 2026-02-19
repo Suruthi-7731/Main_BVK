@@ -349,10 +349,12 @@
 
     /* Responsive for smaller screens */
     @media (max-width: 900px) {
-      .about-section {
-        flex-direction: column;
-        text-align: center;
-      }
+  .divTwo .headingSec > div > div > div {
+    width: 90% !important; /* increase width to 90% of container */
+    max-width: 400px;       /* optional: cap the maximum width */
+    transform: translateY(0) !important; /* reset any translate for elevation effect */
+    margin: 0 auto 30px;    /* center the cards and add spacing between them */
+  }
 
       .about-section img,
       .about-text {
@@ -1258,5 +1260,6 @@ endurance and resilience, to work their words into significant achievements.
   <script src="../js/counter.js"></script>
 </body>
 </html>
+
 
 
