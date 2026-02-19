@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events - BVK School</title>
+
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/index-responsive.css">
     <link rel="stylesheet" href="css/animations.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='../mobile-fixes.css'>
+
     <style>
+        /* 🔥 Prevent Layout Issues */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            padding-top: 100px; /* space for fixed header */
+        }
+
         .page-header {
-            padding: 150px 20px 50px;
-            background:  linear-gradient(135deg, #c64fb9cf 0%, #a94899e1 100%), url('../school1.jpg');
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #c64fb9cf 0%, #a94899e1 100%), url('../school1.jpg');
             text-align: center;
             color: white;
         }
@@ -23,7 +39,7 @@
 
         .events-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
             padding: 80px 5%;
             max-width: 1400px;
@@ -46,12 +62,15 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
+        /* 🔥 CRITICAL FIX FOR DESKTOP */
         .event-img {
-            height: 240px;
-            background: #f0f0f0;
-            background-size: cover;
-            background-position: center;
-            position: relative;
+            height: 240px !important;
+            min-height: 240px;
+            background-color: #f0f0f0;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            display: block !important;
         }
 
         .event-content {
@@ -90,8 +109,7 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background:  #a94899e1;
-            /* Solid Pink */
+            background: #a94899e1;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -111,11 +129,8 @@
         .navItems a:hover,
         .navItems a.active {
             color: #FF6600;
-            /* Orange Hover/Active */
         }
     </style>
-
-  <link rel='stylesheet' href='../mobile-fixes.css'>
 </head>
 
 <body>
@@ -143,6 +158,7 @@
     </section>
 
     <div class="events-grid">
+
         <div class="event-card">
             <div class="event-img" style="background-image: url('img/brown.png');"></div>
             <div class="event-content">
@@ -151,23 +167,22 @@
                 <p>A day of athletic excellence and house spirit. Join us for a variety of track and field events.</p>
             </div>
         </div>
+
         <div class="event-card">
             <div class="event-img" style="background-image: url('img/christmas.png');"></div>
             <div class="event-content">
                 <span class="event-date">December 25, 2025</span>
                 <h3>Christmas Celebration</h3>
-                <p>Witness the creativity and innovation of our students as they showcase their Extra-Curricular
-                    Activities.
-                </p>
+                <p>Witness the creativity and innovation of our students as they showcase their Extra-Curricular Activities.</p>
             </div>
         </div>
+
         <div class="event-card">
             <div class="event-img" style="background-image: url('img/diwali.png');"></div>
             <div class="event-content">
                 <span class="event-date">October 19, 2026</span>
                 <h3>Diwali Celebration</h3>
-                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.
-                </p>
+                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.</p>
             </div>
         </div>
 
@@ -231,6 +246,7 @@
 
 
 </html>
+
 
 
 
