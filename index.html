@@ -379,12 +379,16 @@
     /* Main Navigation */
     /* Main Navigation */
     .main-nav {
-      
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      width: 100%;
-      flex-wrap: wrap;
+        position: fixed;       /* Fixes navbar at the top */
+  top: 0;                /* Aligns to top */
+  left: 0;               /* Aligns left edge */
+  width: 100%;           /* Full width */
+  z-index: 1000;         /* Keeps it above other content */
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
       /* Glass effect */
       background: rgba(255, 255, 255, 0.2); /* semi-transparent */
       backdrop-filter: blur(5px); /* blurs whatever is behind */
@@ -2051,6 +2055,7 @@
   </style>
 </body>
 </html>
+
 
 
 
