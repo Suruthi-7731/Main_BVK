@@ -70,7 +70,7 @@ class SchoolFAQBot {
                     },
                     {
                         question: "What is the admission process?",
-                        answer: "1. Visit school campus at No.7, College Road, Konganagiri Bus Stop, Tirupur - 641602<br>2. Fill admission form<br>3. Submit birth certificate and photos"
+                        answer: "1. Visit school campus at No.7, College Road, Konganagiri Bus Stop, Tiruppur - 641602<br>2. Fill admission form<br>3. Submit birth certificate and photos"
                     },
                     {
                         question: "What facilities are available?",
